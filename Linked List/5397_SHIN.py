@@ -1,11 +1,12 @@
 import sys
 n = int(sys.stdin.readline())
 test = [sys.stdin.readline().strip() for i in range(n)]
-n=2
-test=['<<BP<A>>Cd-','ThIsIsS3Cr3t']
+# n=2
+# test=['<<BP<A>>Cd-','ThIsIsS3Cr3t']
 
-def ans(num):
-    t=test[num]
+
+for i in range(n):
+    t=test[i]
     s=str()
     idx=0 #적용되는 위치
 
@@ -30,6 +31,3 @@ def ans(num):
             else:
                 idx+=1
     print(s)
-
-ans(0)
-ans(1)

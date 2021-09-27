@@ -1,0 +1,76 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+class demo{
+    private int nElems;
+    private int size;
+    private int[] arr;
+    public demo(int rep){
+        size=rep;
+        arr=new int[size];
+        nElems=0;
+    }
+    public void push(int num){
+        arr[nElems]=num;
+        nElems++;
+    }
+    public int pop(){
+        if(nElems==0)
+            return -1;
+        else
+            return arr[nElems---1];
+
+    }
+    public int size(){
+        return nElems;
+    }
+
+    public int empty(){
+        if(nElems==0)
+            return 1;
+        else
+            return 0;
+
+    }
+
+    public int top(){
+        if (nElems==0)
+            return -1;
+        else
+            return arr[nElems-1];
+
+    }
+}
+ public class Main{
+   public static void main(String[] args)throws IOException{
+       BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+       int rep=Integer.parseInt(br.readLine()); //여기는 잘됨
+       StringTokenizer sTok=null;
+       demo st=new demo(rep);
+
+       while(rep-->0){
+           sTok=new StringTokenizer(br.readLine()," ");
+           switch(sTok.nextToken()){
+
+               case "push":
+                   st.push(Integer.parseInt(sTok.nextToken()));
+                   break;
+
+               case "pop":
+                   System.out.println(st.pop());
+                    break;
+               case "size":
+                   System.out.println(st.size());
+                   break;
+               case "empty":
+                   System.out.println(st.empty());
+                   break;
+               case "top":
+                   System.out.println(st.top());
+                   break;
+           }
+       }
+       }//main
+ }//stack

@@ -17,3 +17,9 @@ while len(ballon)>0:
 
 for j in range(n):
     print(result[j], end=" ")
+
+class ballon(object):
+    def __int(self,idx,move,next):
+        self.idx = idx
+        self.move = move
+        self.next = next
