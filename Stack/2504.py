@@ -13,10 +13,10 @@ if pw[0] == "]" or pw[0] ==")" or  pw[-1] == "(" or pw[-1] == "[":
     print(0)
 else:
     if pw[0] =="(":
-        s1_s +=1
+        s1_s += 1
         s1.append(pw[0])
     if pw[0] == "[":
-        s1_m +=1
+        s1_m += 1
         s1.append((pw[0]))
     i=1
     while(i<len(pw)):
