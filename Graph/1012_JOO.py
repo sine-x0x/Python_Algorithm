@@ -17,7 +17,7 @@ def search(x, y):
 for i in range(num):
     m,n,k = map(int,input().split())
     batt = [[0] * m for i in range(n)]
-    cnt =0
+    cnt = 0
     for _ in range(k):
         y,x = map(int,input().split())
         batt[x][y] = 1
