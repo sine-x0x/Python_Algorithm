@@ -30,7 +30,7 @@ v, e = map(int, input().split())
 parent = [0] * (v + 1)
 
 edges = []
-result = 0
+result = []
 
 # 부모 테이블상에서, 부모를 자기 자신으로 초기화
 for i in range(1, v + 1):
@@ -49,6 +49,6 @@ for edge in edges:
     # 사이클이 발생하지 않는 경우에만 집합에 포함(=연결한다.)
     if find(parent, a) != find(parent, b):
         union(parent, a, b)
-        result += cost
+        result.append(cost)
 
-print(result)
+print(sum(result)-max(result))
